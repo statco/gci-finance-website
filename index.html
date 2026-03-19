@@ -897,11 +897,11 @@ footer {
             <div class="calc-field">
               <label><span data-lang-inline="fr">Durée du terme</span><span data-lang-inline="en">Term length</span></label>
               <select id="calc-term" onchange="updateCalc()">
-                <option value="24">24 <span data-lang-inline="fr">mois</span><span data-lang-inline="en">months</span></option>
-                <option value="36">36 <span data-lang-inline="fr">mois</span><span data-lang-inline="en">months</span></option>
-                <option value="48">48 <span data-lang-inline="fr">mois</span><span data-lang-inline="en">months</span></option>
-                <option value="60" selected>60 <span data-lang-inline="fr">mois</span><span data-lang-inline="en">months</span></option>
-                <option value="72">72 <span data-lang-inline="fr">mois</span><span data-lang-inline="en">months</span></option>
+                <option value="24" data-fr="24 mois" data-en="24 months">24 mois / months</option>
+                <option value="36" data-fr="36 mois" data-en="36 months">36 mois / months</option>
+                <option value="48" data-fr="48 mois" data-en="48 months">48 mois / months</option>
+                <option value="60" selected data-fr="60 mois" data-en="60 months">60 mois / months</option>
+                <option value="72" data-fr="72 mois" data-en="72 months">72 mois / months</option>
               </select>
             </div>
             <div class="calc-field">
@@ -1065,22 +1065,22 @@ footer {
               <label><span data-lang-inline="fr">Secteur d'activité</span><span data-lang-inline="en">Industry</span></label>
               <select required>
                 <option value=""></option>
-                <option><span data-lang-inline="fr">Minier</span><span data-lang-inline="en">Mining</span></option>
+                <option data-fr="Minier" data-en="Mining">Minier / Mining</option>
                 <option>Construction</option>
-                <option><span data-lang-inline="fr">Foresterie</span><span data-lang-inline="en">Forestry</span></option>
-                <option><span data-lang-inline="fr">Clinique dentaire</span><span data-lang-inline="en">Dental clinic</span></option>
-                <option><span data-lang-inline="fr">Clinique médicale</span><span data-lang-inline="en">Medical clinic</span></option>
-                <option><span data-lang-inline="fr">Autre</span><span data-lang-inline="en">Other</span></option>
+                <option data-fr="Foresterie" data-en="Forestry">Foresterie / Forestry</option>
+                <option data-fr="Clinique dentaire" data-en="Dental clinic">Clinique dentaire / Dental clinic</option>
+                <option data-fr="Clinique médicale" data-en="Medical clinic">Clinique médicale / Medical clinic</option>
+                <option data-fr="Autre" data-en="Other">Autre / Other</option>
               </select>
             </div>
             <div class="form-field">
               <label><span data-lang-inline="fr">Années en affaires</span><span data-lang-inline="en">Years in business</span></label>
               <select required>
                 <option value=""></option>
-                <option><span data-lang-inline="fr">Moins de 1 an</span><span data-lang-inline="en">Less than 1 year</span></option>
-                <option>1–2 <span data-lang-inline="fr">ans</span><span data-lang-inline="en">years</span></option>
-                <option>2–5 <span data-lang-inline="fr">ans</span><span data-lang-inline="en">years</span></option>
-                <option>5+ <span data-lang-inline="fr">ans</span><span data-lang-inline="en">years</span></option>
+                <option data-fr="Moins de 1 an" data-en="Less than 1 year">Moins de 1 an / Less than 1 year</option>
+                <option data-fr="1–2 ans" data-en="1–2 years">1–2 ans / years</option>
+                <option data-fr="2–5 ans" data-en="2–5 years">2–5 ans / years</option>
+                <option data-fr="5+ ans" data-en="5+ years">5+ ans / years</option>
               </select>
             </div>
           </div>
@@ -1096,10 +1096,10 @@ footer {
             <div class="form-field">
               <label><span data-lang-inline="fr">Terme souhaité</span><span data-lang-inline="en">Desired term</span></label>
               <select>
-                <option>36 <span data-lang-inline="fr">mois</span><span data-lang-inline="en">months</span></option>
-                <option>48 <span data-lang-inline="fr">mois</span><span data-lang-inline="en">months</span></option>
-                <option selected>60 <span data-lang-inline="fr">mois</span><span data-lang-inline="en">months</span></option>
-                <option>72 <span data-lang-inline="fr">mois</span><span data-lang-inline="en">months</span></option>
+                <option data-fr="36 mois" data-en="36 months">36 mois / months</option>
+                <option data-fr="48 mois" data-en="48 months">48 mois / months</option>
+                <option selected data-fr="60 mois" data-en="60 months">60 mois / months</option>
+                <option data-fr="72 mois" data-en="72 months">72 mois / months</option>
               </select>
             </div>
           </div>
@@ -1262,6 +1262,9 @@ function setLang(lang) {
   document.querySelector('meta[name="description"]').content = lang === 'fr'
     ? 'GCI-Finance — Financement d\'équipement rapide pour les secteurs minier, construction, foresterie, dentaire et médical au Québec.'
     : 'GCI-Finance — Fast equipment financing for mining, construction, forestry, dental and medical sectors in Quebec.';
+  document.querySelectorAll('option[data-fr]').forEach(function(opt) {
+    opt.textContent = lang === 'fr' ? opt.getAttribute('data-fr') : opt.getAttribute('data-en');
+  });
 }
 function toggleLang() { setLang(currentLang === 'fr' ? 'en' : 'fr'); }
 
@@ -1295,11 +1298,25 @@ function submitForm(e, formId, successId) {
   e.preventDefault();
   var form = document.getElementById(formId);
   var success = document.getElementById(successId);
-  form.style.display = 'none';
-  success.style.display = 'block';
-  showToast();
-  // To connect to a real backend, replace the above with a fetch() to your endpoint
-  // fetch('/api/contact', { method:'POST', body: new FormData(form) });
+  var btn = form.querySelector('button[type="submit"]');
+  if(btn) { btn.disabled = true; btn.textContent = currentLang === 'fr' ? 'Envoi en cours...' : 'Sending...'; }
+  fetch('https://formspree.io/f/mdawbbro', {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  }).then(function(res) {
+    if(res.ok) {
+      form.style.display = 'none';
+      success.style.display = 'block';
+      showToast();
+    } else {
+      if(btn) { btn.disabled = false; btn.textContent = currentLang === 'fr' ? 'Réessayer' : 'Try again'; }
+      alert(currentLang === 'fr' ? 'Erreur — veuillez réessayer ou nous écrire directement à info@gci-finance.ca' : 'Error — please try again or email us at info@gci-finance.ca');
+    }
+  }).catch(function() {
+    if(btn) { btn.disabled = false; btn.textContent = currentLang === 'fr' ? 'Réessayer' : 'Try again'; }
+    alert(currentLang === 'fr' ? 'Erreur de connexion — veuillez réessayer.' : 'Connection error — please try again.');
+  });
 }
 function showToast() {
   var t = document.getElementById('toast');
@@ -1326,6 +1343,11 @@ document.querySelectorAll('.sector-card').forEach(function(card, i) {
   card.style.transitionDelay = (i * 60) + 'ms';
   card.classList.add('fade-up');
   observer.observe(card);
+});
+
+/* ── Init option labels in French (default lang) ── */
+document.querySelectorAll('option[data-fr]').forEach(function(opt){
+  opt.textContent = opt.getAttribute('data-fr');
 });
 </script>
 </body>
