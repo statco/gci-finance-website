@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="GCI-Finance — Financement d'équipement rapide pour les secteurs minier, construction, foresterie, dentaire et médical au Québec. Partenaire Grenke Finance. Rouyn-Noranda, Abitibi-Témiscamingue.">
+<meta name="keywords" content="financement équipement Abitibi, leasing équipement Québec, financement minier Rouyn-Noranda, financement construction Val-d'Or, equipment financing Quebec">
+<meta property="og:title" content="GCI-Finance — Financement d'équipement au Québec">
+<meta property="og:description" content="Financement rapide pour les secteurs minier, construction, foresterie, dentaire et médical. Réponse en 24–48h. Partenaire Grenke Finance.">
+<meta property="og:url" content="https://www.gci-finance.ca">
+<title>GCI-Finance | Financement d'équipement — Abitibi-Témiscamingue, Québec</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ─── RESET & ROOT ─── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --navy:   #0C3560;
+  --navy2:  #091E3A;
+  --navy3:  #0A2845;
+  --blue:   #1A5EA8;
+  --gold:   #BA7517;
+  --gold2:  #D4891E;
+  --gold-lt:#FBF0DC;
+  --white:  #FFFFFF;
+  --off:    #F7F5F0;
+  --light:  #EBF2FB;
+  --gray:   #64748B;
+  --dark:   #1E293B;
+  --mid:    #94A3B8;
+  --border: rgba(12,53,96,0.12);
+  --ff-display: 'Playfair Display', Georgia, serif;
+  --ff-body: 'DM Sans', system-ui, sans-serif;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --shadow: 0 4px 24px rgba(12,53,96,0.10);
+  --shadow-lg: 0 12px 48px rgba(12,53,96,0.16);
+}
+html { scroll-behavior: smooth; }
+body { font-family: var(--ff-body); color: var(--dark); background: var(--white); line-height: 1.6; overflow-x: hidden; }
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; font-family: var(--ff-body); }
+
+/* ─── LANGUAGE TOGGLE ─── */
+[data-lang] { display: none; }
+body.fr [data-lang="fr"] { display: block; }
+body.en [data-lang="en"] { display: block; }
+body.fr [data-lang-inline="fr"] { display: inline; }
+body.fr [data-lang-inline="en"] { display: none; }
+body.en [data-lang-inline="fr"] { display: none; }
+body.en [data-lang-inline="en"] { display: inline; }
+body.fr [data-lang-flex="fr"] { display: flex; }
+body.fr [data-lang-flex="en"] { display: none; }
+body.en [data-lang-flex="fr"] { display: none; }
+body.en [data-lang-flex="en"] { display: flex; }
+
+/* ─── NAV ─── */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--navy); border-bottom: 1px solid rgba(255,255,255,0.07);
+  padding: 0 5%;
+}
+.nav-inner {
+  max-width: 1160px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 68px;
+}
+.nav-logo {
+  font-family: var(--ff-display); font-size: 22px; color: var(--white);
+  display: flex; align-items: center; gap: 10px;
+}
+.nav-logo span { color: var(--gold); }
+.nav-links {
+  display: flex; align-items: center; gap: 28px;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 14px; font-weight: 400; color: rgba(255,255,255,0.7);
+  transition: color .2s;
+}
+.nav-links a:hover { color: var(--white); }
+.nav-right { display: flex; align-items: center; gap: 12px; }
+.lang-btn {
+  background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+  color: var(--white); font-size: 12px; font-weight: 500; padding: 5px 12px;
+  border-radius: 20px; transition: all .2s;
+}
+.lang-btn:hover { background: rgba(255,255,255,0.2); }
+.nav-cta {
+  background: var(--gold); color: var(--white); font-size: 13px; font-weight: 600;
+  padding: 9px 20px; border-radius: 6px; border: none; transition: background .2s;
+}
+.nav-cta:hover { background: var(--gold2); }
+.hamburger {
+  display: none; flex-direction: column; gap: 5px; background: none;
+  border: none; padding: 4px; cursor: pointer;
+}
+.hamburger span {
+  display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px;
+  transition: all .2s;
+}
+.mobile-menu {
+  display: none; flex-direction: column; gap: 0;
+  background: var(--navy2); padding: 0;
+}
+.mobile-menu.open { display: flex; }
+.mobile-menu a {
+  color: rgba(255,255,255,0.8); font-size: 15px; padding: 14px 5%;
+  border-bottom: 1px solid rgba(255,255,255,0.07); display: block;
+}
+.mobile-menu a:hover { color: var(--white); background: rgba(255,255,255,0.05); }
+
+/* ─── HERO ─── */
+.hero {
+  background: var(--navy);
+  padding: 80px 5% 0;
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; top: 0; right: 0;
+  width: 55%; height: 100%;
+  background: linear-gradient(135deg, transparent 30%, rgba(186,117,23,0.06) 100%);
+  pointer-events: none;
+}
+.hero-geo {
+  position: absolute; top: -80px; right: -80px;
+  width: 500px; height: 500px;
+  border: 1px solid rgba(186,117,23,0.12);
+  border-radius: 50%; pointer-events: none;
+}
+.hero-geo2 {
+  position: absolute; top: 40px; right: 80px;
+  width: 300px; height: 300px;
+  border: 1px solid rgba(186,117,23,0.08);
+  border-radius: 50%; pointer-events: none;
+}
+.hero-inner {
+  max-width: 1160px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 380px; gap: 60px; align-items: start;
+}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(186,117,23,0.15); border: 1px solid rgba(186,117,23,0.3);
+  color: var(--gold2); font-size: 12px; font-weight: 500; letter-spacing: .06em;
+  padding: 6px 14px; border-radius: 20px; margin-bottom: 22px;
+  text-transform: uppercase;
+}
+.hero-eyebrow::before { content: ''; width: 6px; height: 6px; background: var(--gold2); border-radius: 50%; }
+.hero h1 {
+  font-family: var(--ff-display); font-size: clamp(36px, 5vw, 56px);
+  line-height: 1.12; color: var(--white); font-weight: 900;
+  margin-bottom: 20px;
+}
+.hero h1 em { color: var(--gold); font-style: normal; }
+.hero-sub {
+  font-size: 17px; font-weight: 300; color: rgba(255,255,255,0.7);
+  line-height: 1.7; margin-bottom: 32px; max-width: 520px;
+}
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 44px; }
+.btn-primary {
+  background: var(--gold); color: var(--white); font-size: 15px; font-weight: 600;
+  padding: 14px 28px; border-radius: 8px; border: none;
+  transition: background .2s, transform .15s;
+  display: inline-flex; align-items: center; gap: 8px;
+}
+.btn-primary:hover { background: var(--gold2); transform: translateY(-1px); }
+.btn-secondary {
+  background: transparent; color: var(--white); font-size: 15px; font-weight: 500;
+  padding: 14px 28px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.25);
+  transition: all .2s;
+}
+.btn-secondary:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.4); }
+.hero-trust {
+  display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+  padding-bottom: 40px;
+}
+.trust-item {
+  display: flex; align-items: center; gap: 6px;
+  font-size: 13px; color: rgba(255,255,255,0.6);
+}
+.trust-check {
+  width: 18px; height: 18px; background: rgba(186,117,23,0.2);
+  border: 1px solid var(--gold); border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px; color: var(--gold); flex-shrink: 0;
+}
+
+/* Hero card */
+.hero-card {
+  background: var(--white); border-radius: var(--radius-lg);
+  overflow: hidden; box-shadow: var(--shadow-lg);
+  margin-top: -20px;
+}
+.hero-card-header {
+  background: var(--navy2); padding: 16px 20px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.hero-card-title { font-size: 13px; font-weight: 600; color: var(--white); }
+.hero-card-badge {
+  background: rgba(186,117,23,0.2); border: 1px solid rgba(186,117,23,0.4);
+  color: var(--gold2); font-size: 10px; font-weight: 600; padding: 3px 9px;
+  border-radius: 12px; text-transform: uppercase; letter-spacing: .04em;
+}
+.hero-card-body { padding: 20px; }
+.form-field { margin-bottom: 14px; }
+.form-field label {
+  display: block; font-size: 12px; font-weight: 500; color: var(--gray);
+  margin-bottom: 5px; text-transform: uppercase; letter-spacing: .04em;
+}
+.form-field input, .form-field select, .form-field textarea {
+  width: 100%; padding: 11px 14px;
+  border: 1.5px solid var(--border); border-radius: 8px;
+  font-family: var(--ff-body); font-size: 14px; color: var(--dark);
+  background: var(--white); transition: border-color .2s;
+  appearance: none;
+}
+.form-field input:focus, .form-field select:focus, .form-field textarea:focus {
+  outline: none; border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(26,94,168,0.1);
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.form-submit {
+  width: 100%; background: var(--navy); color: var(--white);
+  font-size: 14px; font-weight: 600; padding: 13px;
+  border-radius: 8px; border: none; transition: background .2s;
+  margin-top: 4px;
+}
+.form-submit:hover { background: var(--blue); }
+.form-note {
+  font-size: 11px; color: var(--mid); text-align: center; margin-top: 8px;
+}
+.form-success {
+  display: none; text-align: center; padding: 20px;
+  background: #eaf3de; border-radius: 8px; margin-top: 10px;
+  font-size: 13px; color: #27500a; font-weight: 500;
+}
+
+/* ─── TRUST STRIP ─── */
+.trust-strip {
+  background: var(--navy2);
+  padding: 0 5%;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.trust-strip-inner {
+  max-width: 1160px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: center;
+  gap: 0; flex-wrap: wrap;
+}
+.ts-item {
+  display: flex; align-items: center; gap: 8px;
+  padding: 16px 24px; font-size: 13px; color: rgba(255,255,255,0.55);
+  border-right: 1px solid rgba(255,255,255,0.07);
+  white-space: nowrap;
+}
+.ts-item:last-child { border-right: none; }
+.ts-dot { width: 7px; height: 7px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
+
+/* ─── SECTION WRAPPER ─── */
+.section { padding: 88px 5%; }
+.section-alt { background: var(--off); }
+.section-dark { background: var(--navy); }
+.container { max-width: 1160px; margin: 0 auto; }
+.section-eyebrow {
+  display: inline-block; font-size: 11px; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 12px;
+}
+.section-title {
+  font-family: var(--ff-display); font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700; color: var(--navy); line-height: 1.2;
+  margin-bottom: 14px;
+}
+.section-dark .section-title { color: var(--white); }
+.section-sub {
+  font-size: 17px; font-weight: 300; color: var(--gray);
+  max-width: 560px; line-height: 1.7;
+}
+.section-dark .section-sub { color: rgba(255,255,255,0.6); }
+.section-head { margin-bottom: 52px; }
+
+/* ─── SECTORS ─── */
+.sectors-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+.sector-card {
+  background: var(--white); border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg); padding: 28px 20px;
+  text-align: center; transition: all .25s; cursor: pointer;
+  position: relative; overflow: hidden;
+}
+.sector-card::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0;
+  height: 3px; background: var(--gold); transform: scaleX(0);
+  transition: transform .25s; transform-origin: left;
+}
+.sector-card:hover { border-color: var(--gold); box-shadow: var(--shadow); transform: translateY(-3px); }
+.sector-card:hover::after { transform: scaleX(1); }
+.sector-icon-wrap {
+  width: 52px; height: 52px; background: var(--light);
+  border-radius: 14px; display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 14px; font-size: 22px; transition: background .25s;
+}
+.sector-card:hover .sector-icon-wrap { background: var(--gold-lt); }
+.sector-name { font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+.sector-range { font-size: 11px; color: var(--mid); }
+.sector-equip { font-size: 11px; color: var(--gray); margin-top: 6px; line-height: 1.5; }
+
+/* ─── STATS ─── */
+.stats-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 0; border-radius: var(--radius-lg); overflow: hidden;
+  border: 1.5px solid rgba(255,255,255,0.1);
+}
+.stat-block {
+  padding: 40px 28px; border-right: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+}
+.stat-block:last-child { border-right: none; }
+.stat-num {
+  font-family: var(--ff-display); font-size: 44px; font-weight: 900;
+  color: var(--white); line-height: 1;
+}
+.stat-num em { color: var(--gold); font-style: normal; }
+.stat-label { font-size: 13px; color: rgba(255,255,255,0.5); margin-top: 8px; }
+
+/* ─── CALCULATOR ─── */
+.calc-wrap {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+  align-items: center;
+}
+.calc-left .section-title { color: var(--navy); }
+.calc-left .section-sub { color: var(--gray); }
+.calc-card {
+  background: var(--white); border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg); overflow: hidden;
+  box-shadow: var(--shadow);
+}
+.calc-card-header {
+  background: var(--navy); padding: 20px 24px;
+}
+.calc-card-header h3 {
+  font-family: var(--ff-display); font-size: 18px; color: var(--white); font-weight: 700;
+}
+.calc-card-header p { font-size: 13px; color: rgba(255,255,255,0.55); margin-top: 3px; }
+.calc-body { padding: 24px; }
+.calc-field { margin-bottom: 16px; }
+.calc-field label {
+  display: block; font-size: 12px; font-weight: 600; color: var(--gray);
+  margin-bottom: 6px; text-transform: uppercase; letter-spacing: .04em;
+}
+.calc-field input, .calc-field select {
+  width: 100%; padding: 12px 16px;
+  border: 1.5px solid var(--border); border-radius: 8px;
+  font-family: var(--ff-body); font-size: 15px; color: var(--dark);
+  background: var(--white); transition: border-color .2s;
+  appearance: none;
+}
+.calc-field input:focus, .calc-field select:focus {
+  outline: none; border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(26,94,168,0.1);
+}
+.calc-fields-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.calc-result-box {
+  background: var(--light); border: 1.5px solid rgba(26,94,168,0.15);
+  border-radius: 10px; padding: 20px; margin: 16px 0;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.calc-result-label { font-size: 12px; font-weight: 500; color: var(--gray); text-transform: uppercase; letter-spacing: .04em; }
+.calc-result-amount { font-family: var(--ff-display); font-size: 32px; font-weight: 900; color: var(--navy); }
+.calc-result-note { font-size: 11px; color: var(--mid); margin-top: 2px; }
+.calc-btn-main {
+  width: 100%; background: var(--gold); color: var(--white);
+  font-size: 15px; font-weight: 600; padding: 14px;
+  border-radius: 8px; border: none; transition: background .2s;
+}
+.calc-btn-main:hover { background: var(--gold2); }
+.calc-disclaimer { font-size: 11px; color: var(--mid); text-align: center; margin-top: 10px; line-height: 1.5; }
+
+/* ─── PROCESS ─── */
+.process-grid {
+  display: grid; grid-template-columns: repeat(5, 1fr);
+  gap: 0; position: relative;
+}
+.process-grid::before {
+  content: ''; position: absolute;
+  top: 32px; left: calc(10% + 16px); right: calc(10% + 16px);
+  height: 1px; background: rgba(255,255,255,0.12);
+}
+.process-step {
+  text-align: center; padding: 0 12px;
+  display: flex; flex-direction: column; align-items: center;
+}
+.step-num {
+  width: 64px; height: 64px; border-radius: 50%;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.05);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--ff-display); font-size: 24px; font-weight: 900;
+  color: var(--gold); margin-bottom: 20px; position: relative; z-index: 1;
+  transition: all .25s;
+}
+.process-step:hover .step-num {
+  background: var(--gold); color: var(--white); border-color: var(--gold);
+}
+.step-title { font-size: 14px; font-weight: 600; color: var(--white); margin-bottom: 8px; }
+.step-desc { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.6; }
+
+/* ─── WHY US ─── */
+.why-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.why-card {
+  background: var(--white); border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg); padding: 32px 28px;
+  transition: all .25s;
+}
+.why-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+.why-icon {
+  width: 44px; height: 44px; background: var(--light);
+  border-radius: 12px; display: flex; align-items: center; justify-content: center;
+  font-size: 20px; margin-bottom: 18px;
+}
+.why-title { font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 10px; }
+.why-desc { font-size: 14px; color: var(--gray); line-height: 1.7; }
+
+/* ─── APPLY SECTION ─── */
+.apply-band {
+  background: var(--navy); padding: 80px 5%;
+  position: relative; overflow: hidden;
+}
+.apply-band::before {
+  content: ''; position: absolute;
+  top: -100px; right: -100px;
+  width: 400px; height: 400px;
+  border: 1px solid rgba(186,117,23,0.1);
+  border-radius: 50%;
+}
+.apply-inner {
+  max-width: 1160px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 60px;
+  align-items: start;
+}
+.apply-left {}
+.apply-left .section-title { color: var(--white); }
+.apply-left .section-sub { color: rgba(255,255,255,0.55); margin-bottom: 28px; }
+.apply-requirements { list-style: none; }
+.apply-requirements li {
+  display: flex; align-items: flex-start; gap: 10px;
+  font-size: 14px; color: rgba(255,255,255,0.65);
+  padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.apply-requirements li:last-child { border-bottom: none; }
+.req-check {
+  width: 18px; height: 18px; background: rgba(186,117,23,0.2);
+  border: 1px solid var(--gold); border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 10px; color: var(--gold); flex-shrink: 0; margin-top: 1px;
+}
+.apply-form-card {
+  background: var(--white); border-radius: var(--radius-lg);
+  overflow: hidden; box-shadow: var(--shadow-lg);
+}
+.apply-form-header {
+  background: var(--gold); padding: 18px 24px;
+}
+.apply-form-header h3 {
+  font-family: var(--ff-display); font-size: 18px; color: var(--white); font-weight: 700;
+}
+.apply-form-header p { font-size: 13px; color: rgba(255,255,255,0.75); margin-top: 3px; }
+.apply-form-body { padding: 24px; }
+.apply-submit {
+  width: 100%; background: var(--navy); color: var(--white);
+  font-size: 15px; font-weight: 600; padding: 14px;
+  border-radius: 8px; border: none; transition: background .2s; margin-top: 4px;
+}
+.apply-submit:hover { background: var(--blue); }
+
+/* ─── ABOUT ─── */
+.about-wrap {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center;
+}
+.about-card {
+  background: var(--navy); border-radius: var(--radius-lg);
+  padding: 40px; position: relative; overflow: hidden;
+}
+.about-card::before {
+  content: ''; position: absolute;
+  top: -60px; right: -60px; width: 200px; height: 200px;
+  border: 1px solid rgba(186,117,23,0.15); border-radius: 50%;
+}
+.about-contact-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08);
+  font-size: 14px; color: rgba(255,255,255,0.7);
+}
+.about-contact-item:last-child { border-bottom: none; }
+.about-icon {
+  width: 36px; height: 36px; background: rgba(186,117,23,0.15);
+  border-radius: 8px; display: flex; align-items: center; justify-content: center;
+  font-size: 15px; flex-shrink: 0;
+}
+.about-contact-item a { color: rgba(255,255,255,0.7); transition: color .2s; }
+.about-contact-item a:hover { color: var(--gold2); }
+.partner-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(186,117,23,0.12); border: 1px solid rgba(186,117,23,0.25);
+  border-radius: 8px; padding: 10px 16px; margin-bottom: 20px;
+  font-size: 13px; font-weight: 500; color: var(--gold2);
+}
+.about-text h2 {
+  font-family: var(--ff-display); font-size: clamp(26px, 3.5vw, 36px);
+  font-weight: 700; color: var(--navy); margin-bottom: 16px; line-height: 1.25;
+}
+.about-text p { font-size: 15px; color: var(--gray); line-height: 1.8; margin-bottom: 16px; }
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--navy2); padding: 52px 5% 28px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+.footer-inner {
+  max-width: 1160px; margin: 0 auto;
+}
+.footer-top {
+  display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 48px;
+  margin-bottom: 40px;
+}
+.footer-logo {
+  font-family: var(--ff-display); font-size: 20px; color: var(--white);
+  margin-bottom: 12px;
+}
+.footer-logo span { color: var(--gold); }
+.footer-desc { font-size: 13px; color: rgba(255,255,255,0.4); line-height: 1.7; }
+.footer-col h4 {
+  font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.9);
+  letter-spacing: .06em; text-transform: uppercase; margin-bottom: 14px;
+}
+.footer-col a {
+  display: block; font-size: 13px; color: rgba(255,255,255,0.4);
+  margin-bottom: 8px; transition: color .2s;
+}
+.footer-col a:hover { color: rgba(255,255,255,0.75); }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 20px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 10px;
+}
+.footer-copy { font-size: 12px; color: rgba(255,255,255,0.3); }
+.footer-langs { display: flex; gap: 12px; }
+.footer-langs a { font-size: 12px; color: rgba(255,255,255,0.3); transition: color .2s; }
+.footer-langs a:hover { color: rgba(255,255,255,0.6); }
+
+/* ─── NOTIFICATION TOAST ─── */
+.toast {
+  position: fixed; bottom: 24px; right: 24px; z-index: 999;
+  background: var(--navy); color: var(--white); border-left: 4px solid var(--gold);
+  padding: 14px 20px; border-radius: 8px; font-size: 14px;
+  box-shadow: var(--shadow-lg); transform: translateX(120%);
+  transition: transform .35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  max-width: 320px;
+}
+.toast.show { transform: translateX(0); }
+
+/* ─── SCROLL ANIMATION ─── */
+.fade-up { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 1024px) {
+  .sectors-grid { grid-template-columns: repeat(3, 1fr); }
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero-card { max-width: 480px; margin: 0; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .process-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .process-grid::before { display: none; }
+  .calc-wrap { grid-template-columns: 1fr; gap: 32px; }
+  .apply-inner { grid-template-columns: 1fr; gap: 40px; }
+  .about-wrap { grid-template-columns: 1fr; gap: 40px; }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  .nav-cta { display: none; }
+  .hamburger { display: flex; }
+  .sectors-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .process-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr; gap: 28px; }
+  .ts-item { padding: 12px 14px; font-size: 12px; }
+  .calc-fields-row { grid-template-columns: 1fr; }
+  .section { padding: 60px 5%; }
+}
+@media (max-width: 480px) {
+  .sectors-grid { grid-template-columns: 1fr 1fr; }
+  .hero { padding: 52px 5% 0; }
+  .stat-block { padding: 28px 16px; }
+}
+</style>
+</head>
+
+<body class="fr">
+
+<!-- TOAST -->
+<div class="toast" id="toast">✓ Demande envoyée — nous vous contacterons sous 24h</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">GCI-<span>Finance</span></div>
+    <ul class="nav-links">
+      <li><a href="#services" data-lang-inline="fr">Services</a><a href="#services" data-lang-inline="en">Services</a></li>
+      <li><a href="#secteurs" data-lang-inline="fr">Secteurs</a><a href="#secteurs" data-lang-inline="en">Sectors</a></li>
+      <li><a href="#calculateur" data-lang-inline="fr">Calculateur</a><a href="#calculateur" data-lang-inline="en">Calculator</a></li>
+      <li><a href="#a-propos" data-lang-inline="fr">À propos</a><a href="#a-propos" data-lang-inline="en">About</a></li>
+      <li><a href="#contact" data-lang-inline="fr">Contact</a><a href="#contact" data-lang-inline="en">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="lang-btn" onclick="toggleLang()" id="lang-toggle">EN</button>
+      <button class="nav-cta" onclick="document.getElementById('demande').scrollIntoView({behavior:'smooth'})">
+        <span data-lang-inline="fr">Faire une demande</span>
+        <span data-lang-inline="en">Apply Now</span>
+      </button>
+    </div>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#services" onclick="toggleMenu()"><span data-lang-inline="fr">Services</span><span data-lang-inline="en">Services</span></a>
+    <a href="#secteurs" onclick="toggleMenu()"><span data-lang-inline="fr">Secteurs</span><span data-lang-inline="en">Sectors</span></a>
+    <a href="#calculateur" onclick="toggleMenu()"><span data-lang-inline="fr">Calculateur</span><span data-lang-inline="en">Calculator</span></a>
+    <a href="#demande" onclick="toggleMenu()"><span data-lang-inline="fr">Faire une demande</span><span data-lang-inline="en">Apply Now</span></a>
+    <a href="#a-propos" onclick="toggleMenu()"><span data-lang-inline="fr">À propos</span><span data-lang-inline="en">About</span></a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-geo"></div>
+  <div class="hero-geo2"></div>
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-eyebrow">
+        <span data-lang-inline="fr">Partenaire Grenke Finance · Abitibi-Témiscamingue, Québec</span>
+        <span data-lang-inline="en">Grenke Finance Partner · Abitibi-Témiscamingue, Quebec</span>
+      </div>
+
+      <div data-lang="fr">
+        <h1>Financement d'équipement <em>rapide</em> pour les industries du Québec</h1>
+        <p class="hero-sub">Minier · Construction · Foresterie · Dentaire · Médical<br>Réponse en 24–48 h · Service bilingue · Basé à Rouyn-Noranda</p>
+      </div>
+      <div data-lang="en">
+        <h1>Fast equipment financing for Quebec's <em>industries</em></h1>
+        <p class="hero-sub">Mining · Construction · Forestry · Dental · Medical<br>24–48h approval · Bilingual service · Based in Rouyn-Noranda</p>
+      </div>
+
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="document.getElementById('demande').scrollIntoView({behavior:'smooth'})">
+          <span data-lang-inline="fr">Faire une demande →</span>
+          <span data-lang-inline="en">Apply for financing →</span>
+        </button>
+        <button class="btn-secondary" onclick="document.getElementById('calculateur').scrollIntoView({behavior:'smooth'})">
+          <span data-lang-inline="fr">Calculer mon paiement</span>
+          <span data-lang-inline="en">Estimate my payment</span>
+        </button>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><div class="trust-check">✓</div> <span data-lang-inline="fr">Partenaire Grenke Finance</span><span data-lang-inline="en">Grenke Finance partner</span></div>
+        <div class="trust-item"><div class="trust-check">✓</div> <span data-lang-inline="fr">Approuvé en 24–48 h</span><span data-lang-inline="en">24–48h approval</span></div>
+        <div class="trust-item"><div class="trust-check">✓</div> <span data-lang-inline="fr">Équipement neuf et usagé</span><span data-lang-inline="en">New and used equipment</span></div>
+        <div class="trust-item"><div class="trust-check">✓</div> <span data-lang-inline="fr">Service bilingue</span><span data-lang-inline="en">Bilingual service</span></div>
+      </div>
+    </div>
+
+    <!-- HERO QUICK FORM -->
+    <div class="hero-card fade-up">
+      <div class="hero-card-header">
+        <span class="hero-card-title">
+          <span data-lang-inline="fr">Demande de préqualification</span>
+          <span data-lang-inline="en">Pre-qualification request</span>
+        </span>
+        <span class="hero-card-badge">
+          <span data-lang-inline="fr">Gratuit · Sans engagement</span>
+          <span data-lang-inline="en">Free · No commitment</span>
+        </span>
+      </div>
+      <div class="hero-card-body">
+        <form id="hero-form" onsubmit="submitForm(event,'hero-form','hero-success')">
+          <div class="form-row">
+            <div class="form-field">
+              <label><span data-lang-inline="fr">Prénom</span><span data-lang-inline="en">First name</span></label>
+              <input type="text" placeholder="Patrick" required>
+            </div>
+            <div class="form-field">
+              <label><span data-lang-inline="fr">Nom</span><span data-lang-inline="en">Last name</span></label>
+              <input type="text" placeholder="Pierre" required>
+            </div>
+          </div>
+          <div class="form-field">
+            <label><span data-lang-inline="fr">Entreprise</span><span data-lang-inline="en">Company</span></label>
+            <input type="text" placeholder="Excavation Tremblay Inc." required>
+          </div>
+          <div class="form-field">
+            <label><span data-lang-inline="fr">Secteur</span><span data-lang-inline="en">Sector</span></label>
+            <select required>
+              <option value=""><span data-lang-inline="fr">Sélectionner...</span><span data-lang-inline="en">Select...</span></option>
+              <option data-lang-inline="fr">Minier</option><option data-lang-inline="en" style="display:none">Mining</option>
+              <option>Construction</option>
+              <option data-lang-inline="fr">Foresterie</option><option data-lang-inline="en" style="display:none">Forestry</option>
+              <option data-lang-inline="fr">Clinique dentaire</option><option data-lang-inline="en" style="display:none">Dental clinic</option>
+              <option data-lang-inline="fr">Clinique médicale</option><option data-lang-inline="en" style="display:none">Medical clinic</option>
+              <option data-lang-inline="fr">Autre</option><option data-lang-inline="en" style="display:none">Other</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label><span data-lang-inline="fr">Valeur estimée</span><span data-lang-inline="en">Est. equipment value</span></label>
+              <input type="text" placeholder="ex: 75 000 $" required>
+            </div>
+            <div class="form-field">
+              <label><span data-lang-inline="fr">Téléphone</span><span data-lang-inline="en">Phone</span></label>
+              <input type="tel" placeholder="(819) 555-0100" required>
+            </div>
+          </div>
+          <div class="form-field">
+            <label>Courriel / Email</label>
+            <input type="email" placeholder="patrick@entreprise.ca" required>
+          </div>
+          <button type="submit" class="form-submit">
+            <span data-lang-inline="fr">Soumettre ma demande →</span>
+            <span data-lang-inline="en">Submit my request →</span>
+          </button>
+          <p class="form-note">
+            <span data-lang-inline="fr">Réponse garantie sous 24–48 h · Aucun engagement requis</span>
+            <span data-lang-inline="en">Response guaranteed within 24–48h · No commitment required</span>
+          </p>
+        </form>
+        <div class="form-success" id="hero-success">
+          <span data-lang-inline="fr">✓ Demande reçue ! Nous vous contacterons sous 24 heures.</span>
+          <span data-lang-inline="en">✓ Request received! We'll contact you within 24 hours.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-strip-inner">
+    <div class="ts-item"><div class="ts-dot"></div> <span data-lang-inline="fr">Partenaire officiel Grenke Finance</span><span data-lang-inline="en">Official Grenke Finance partner</span></div>
+    <div class="ts-item"><div class="ts-dot"></div> <span data-lang-inline="fr">Approbation en 24–48 h</span><span data-lang-inline="en">24–48h approval</span></div>
+    <div class="ts-item"><div class="ts-dot"></div> <span data-lang-inline="fr">Équipement neuf et usagé</span><span data-lang-inline="en">New and used equipment</span></div>
+    <div class="ts-item"><div class="ts-dot"></div> <span data-lang-inline="fr">15 000 $ et plus</span><span data-lang-inline="en">$15,000 and up</span></div>
+    <div class="ts-item"><div class="ts-dot"></div> <span data-lang-inline="fr">100 % de financement possible</span><span data-lang-inline="en">100% financing available</span></div>
+  </div>
+</div>
+
+<!-- SECTORS -->
+<section class="section" id="secteurs">
+  <div class="container">
+    <div class="section-head fade-up">
+      <div class="section-eyebrow"><span data-lang-inline="fr">Secteurs desservis</span><span data-lang-inline="en">Sectors we serve</span></div>
+      <div class="section-title">
+        <span data-lang-inline="fr">Spécialistes de votre industrie</span>
+        <span data-lang-inline="en">Specialists in your industry</span>
+      </div>
+      <p class="section-sub">
+        <span data-lang-inline="fr">Nous connaissons les actifs, les cycles et les besoins propres à chaque secteur — ce que votre banque ne comprend pas toujours.</span>
+        <span data-lang-inline="en">We understand the assets, cycles and specific needs of each sector — what your bank doesn't always grasp.</span>
+      </p>
+    </div>
+    <div class="sectors-grid fade-up" id="secteurs-grid">
+      <div class="sector-card">
+        <div class="sector-icon-wrap">⛏️</div>
+        <div class="sector-name"><span data-lang-inline="fr">Minier</span><span data-lang-inline="en">Mining</span></div>
+        <div class="sector-range">80 000 $ – 200 000 $+</div>
+        <div class="sector-equip"><span data-lang-inline="fr">Foreuses · Chargeuses · Camions · Équipements souterrains</span><span data-lang-inline="en">Drills · Loaders · Haul trucks · Underground equipment</span></div>
+      </div>
+      <div class="sector-card">
+        <div class="sector-icon-wrap">🏗️</div>
+        <div class="sector-name">Construction</div>
+        <div class="sector-range">40 000 $ – 120 000 $</div>
+        <div class="sector-equip"><span data-lang-inline="fr">Excavatrices · Grues · Bétonnières · Compacteurs</span><span data-lang-inline="en">Excavators · Cranes · Concrete mixers · Compactors</span></div>
+      </div>
+      <div class="sector-card">
+        <div class="sector-icon-wrap">🌲</div>
+        <div class="sector-name"><span data-lang-inline="fr">Foresterie</span><span data-lang-inline="en">Forestry</span></div>
+        <div class="sector-range">60 000 $ – 150 000 $</div>
+        <div class="sector-equip"><span data-lang-inline="fr">Abatteuses · Débusqueuses · Équipements de scierie</span><span data-lang-inline="en">Harvesters · Skidders · Sawmill equipment</span></div>
+      </div>
+      <div class="sector-card">
+        <div class="sector-icon-wrap">🦷</div>
+        <div class="sector-name"><span data-lang-inline="fr">Dentaire</span><span data-lang-inline="en">Dental</span></div>
+        <div class="sector-range">25 000 $ – 80 000 $</div>
+        <div class="sector-equip"><span data-lang-inline="fr">Fauteuils · Rayons X · Systèmes de laboratoire</span><span data-lang-inline="en">Chairs · X-ray · Lab systems · IT</span></div>
+      </div>
+      <div class="sector-card">
+        <div class="sector-icon-wrap">🏥</div>
+        <div class="sector-name"><span data-lang-inline="fr">Médical</span><span data-lang-inline="en">Medical</span></div>
+        <div class="sector-range">50 000 $ – 200 000 $</div>
+        <div class="sector-equip"><span data-lang-inline="fr">Imagerie · Diagnostic · Tables · Systèmes DMÉ</span><span data-lang-inline="en">Imaging · Diagnostic · Patient tables · EMR</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="section section-dark" id="services">
+  <div class="container">
+    <div class="section-head fade-up" style="text-align:center">
+      <div class="section-eyebrow"><span data-lang-inline="fr">Nos chiffres</span><span data-lang-inline="en">Our numbers</span></div>
+      <div class="section-title">
+        <span data-lang-inline="fr">Financement simple, rapide, local</span>
+        <span data-lang-inline="en">Simple, fast, local financing</span>
+      </div>
+    </div>
+    <div class="stats-grid fade-up">
+      <div class="stat-block">
+        <div class="stat-num">24<em>–</em>48<em>h</em></div>
+        <div class="stat-label"><span data-lang-inline="fr">Délai d'approbation typique</span><span data-lang-inline="en">Typical approval time</span></div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">100<em>%</em></div>
+        <div class="stat-label"><span data-lang-inline="fr">Financement possible, sans mise de fonds</span><span data-lang-inline="en">Financing possible, no down payment</span></div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num"><em>$</em>0</div>
+        <div class="stat-label"><span data-lang-inline="fr">Frais de consultation</span><span data-lang-inline="en">Consultation fees</span></div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">5</div>
+        <div class="stat-label"><span data-lang-inline="fr">Secteurs spécialisés</span><span data-lang-inline="en">Specialized sectors</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CALCULATOR -->
+<section class="section section-alt" id="calculateur">
+  <div class="container">
+    <div class="calc-wrap">
+      <div class="calc-left fade-up">
+        <div class="section-eyebrow"><span data-lang-inline="fr">Outil de calcul</span><span data-lang-inline="en">Calculation tool</span></div>
+        <h2 class="section-title">
+          <span data-lang-inline="fr">Estimez votre paiement mensuel</span>
+          <span data-lang-inline="en">Estimate your monthly payment</span>
+        </h2>
+        <p class="section-sub">
+          <span data-lang-inline="fr">Entrez la valeur de votre équipement et la durée souhaitée pour voir une estimation instantanée. Contactez-nous pour un vrai devis personnalisé.</span>
+          <span data-lang-inline="en">Enter your equipment value and desired term to see an instant estimate. Contact us for a real personalized quote.</span>
+        </p>
+        <div style="margin-top:28px">
+          <div class="why-card" style="margin-bottom:14px;padding:20px 22px">
+            <div class="why-title" style="font-size:14px">
+              <span data-lang-inline="fr">📋 Bail-financement (rachat à 1 $)</span>
+              <span data-lang-inline="en">📋 Finance lease ($1 buyout)</span>
+            </div>
+            <div class="why-desc" style="font-size:13px">
+              <span data-lang-inline="fr">Devenez propriétaire à la fin du terme. Idéal pour construction et foresterie.</span>
+              <span data-lang-inline="en">Own the equipment at end of term. Ideal for construction and forestry.</span>
+            </div>
+          </div>
+          <div class="why-card" style="padding:20px 22px">
+            <div class="why-title" style="font-size:14px">
+              <span data-lang-inline="fr">📋 Location à valeur marchande (FMV)</span>
+              <span data-lang-inline="en">📋 Fair Market Value lease (FMV)</span>
+            </div>
+            <div class="why-desc" style="font-size:13px">
+              <span data-lang-inline="fr">Paiements réduits, flexibilité à la fin. Idéal pour le secteur médical et dentaire.</span>
+              <span data-lang-inline="en">Lower payments, flexibility at end of term. Ideal for dental and medical.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="calc-card fade-up">
+        <div class="calc-card-header">
+          <h3><span data-lang-inline="fr">Calculateur de paiement</span><span data-lang-inline="en">Payment calculator</span></h3>
+          <p><span data-lang-inline="fr">Résultat instantané · Taux illustratif</span><span data-lang-inline="en">Instant result · Illustrative rate</span></p>
+        </div>
+        <div class="calc-body">
+          <div class="calc-field">
+            <label><span data-lang-inline="fr">Valeur de l'équipement ($)</span><span data-lang-inline="en">Equipment value ($)</span></label>
+            <input type="number" id="calc-val" placeholder="75000" min="15000" step="1000" oninput="updateCalc()">
+          </div>
+          <div class="calc-fields-row">
+            <div class="calc-field">
+              <label><span data-lang-inline="fr">Durée du terme</span><span data-lang-inline="en">Term length</span></label>
+              <select id="calc-term" onchange="updateCalc()">
+                <option value="24">24 <span data-lang-inline="fr">mois</span><span data-lang-inline="en">months</span></option>
+                <option value="36">36 <span data-lang-inline="fr">mois</span><span data-lang-inline="en">months</span></option>
+                <option value="48">48 <span data-lang-inline="fr">mois</span><span data-lang-inline="en">months</span></option>
+                <option value="60" selected>60 <span data-lang-inline="fr">mois</span><span data-lang-inline="en">months</span></option>
+                <option value="72">72 <span data-lang-inline="fr">mois</span><span data-lang-inline="en">months</span></option>
+              </select>
+            </div>
+            <div class="calc-field">
+              <label><span data-lang-inline="fr">Type de location</span><span data-lang-inline="en">Lease type</span></label>
+              <select id="calc-type" onchange="updateCalc()">
+                <option value="buyout"><span data-lang-inline="fr">Rachat à 1 $</span><span data-lang-inline="en">$1 Buyout</span></option>
+                <option value="fmv">FMV</option>
+              </select>
+            </div>
+          </div>
+          <div class="calc-result-box">
+            <div>
+              <div class="calc-result-label"><span data-lang-inline="fr">Paiement mensuel estimé</span><span data-lang-inline="en">Estimated monthly payment</span></div>
+              <div class="calc-result-amount" id="calc-result">—</div>
+              <div class="calc-result-note" id="calc-note"><span data-lang-inline="fr">Entrez un montant ci-dessus</span><span data-lang-inline="en">Enter an amount above</span></div>
+            </div>
+          </div>
+          <button class="calc-btn-main" onclick="document.getElementById('demande').scrollIntoView({behavior:'smooth'})">
+            <span data-lang-inline="fr">Obtenir un vrai devis →</span>
+            <span data-lang-inline="en">Get a real quote →</span>
+          </button>
+          <p class="calc-disclaimer">
+            <span data-lang-inline="fr">Estimation à titre indicatif uniquement. Taux illustratif de 7,2 % — le taux réel dépend du dossier, de l'équipement et du prêteur.</span>
+            <span data-lang-inline="en">Estimate for illustrative purposes only. Illustrative rate 7.2% — actual rate depends on your file, equipment and lender.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-head fade-up" style="text-align:center; max-width:580px; margin:0 auto 52px">
+      <div class="section-eyebrow"><span data-lang-inline="fr">Comment ça fonctionne</span><span data-lang-inline="en">How it works</span></div>
+      <div class="section-title">
+        <span data-lang-inline="fr">Simple, rapide, sans tracas</span>
+        <span data-lang-inline="en">Simple, fast, no hassle</span>
+      </div>
+    </div>
+    <div class="process-grid fade-up">
+      <div class="process-step">
+        <div class="step-num">1</div>
+        <div class="step-title"><span data-lang-inline="fr">Demande rapide</span><span data-lang-inline="en">Quick request</span></div>
+        <div class="step-desc"><span data-lang-inline="fr">Remplissez le formulaire en 5 minutes. Aucun engagement.</span><span data-lang-inline="en">Fill out the form in 5 minutes. No commitment.</span></div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">2</div>
+        <div class="step-title"><span data-lang-inline="fr">Analyse du dossier</span><span data-lang-inline="en">File review</span></div>
+        <div class="step-desc"><span data-lang-inline="fr">Notre équipe évalue votre dossier et sélectionne le meilleur prêteur.</span><span data-lang-inline="en">Our team evaluates your file and selects the best lender.</span></div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">3</div>
+        <div class="step-title"><span data-lang-inline="fr">Soumission au prêteur</span><span data-lang-inline="en">Lender submission</span></div>
+        <div class="step-desc"><span data-lang-inline="fr">Nous soumettons votre dossier complet. Réponse en 24–48 h.</span><span data-lang-inline="en">We submit your complete file. Response in 24–48h.</span></div>
+      </div>
+      <div class="process-step">
+        <div class="step-num">4</div>
+        <div class="step-title"><span data-lang-inline="fr">Approbation et signature</span><span data-lang-inline="en">Approval & signing</span></div>
+        <div class="step-desc"><span data-lang-inline="fr">Vous signez vos documents. Nous gérons toute la paperasse.</span><span data-lang-inline="en">You sign documents. We handle all the paperwork.</span></div>
+      </div>
+      <div class="process-step">
+        <div class="step-num" style="background:var(--gold);color:var(--white);border-color:var(--gold)">5</div>
+        <div class="step-title"><span data-lang-inline="fr">Financement versé</span><span data-lang-inline="en">Financing funded</span></div>
+        <div class="step-desc"><span data-lang-inline="fr">Le fournisseur est payé. Vous recevez votre équipement. Prêt à travailler.</span><span data-lang-inline="en">Vendor is paid. You get your equipment. Ready to work.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section" id="a-propos">
+  <div class="container">
+    <div class="section-head fade-up">
+      <div class="section-eyebrow"><span data-lang-inline="fr">Pourquoi GCI-Finance</span><span data-lang-inline="en">Why GCI-Finance</span></div>
+      <div class="section-title">
+        <span data-lang-inline="fr">Ce que nous apportons, que votre banque n'offre pas</span>
+        <span data-lang-inline="en">What we bring that your bank doesn't offer</span>
+      </div>
+    </div>
+    <div class="why-grid fade-up">
+      <div class="why-card">
+        <div class="why-icon">⚡</div>
+        <div class="why-title"><span data-lang-inline="fr">Rapidité d'approbation</span><span data-lang-inline="en">Fast approvals</span></div>
+        <div class="why-desc"><span data-lang-inline="fr">24 à 48 heures au lieu de 3 à 5 semaines. Quand un projet ne peut pas attendre, nous livrons.</span><span data-lang-inline="en">24 to 48 hours instead of 3 to 5 weeks. When a project can't wait, we deliver.</span></div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🎯</div>
+        <div class="why-title"><span data-lang-inline="fr">Expertise sectorielle</span><span data-lang-inline="en">Sector expertise</span></div>
+        <div class="why-desc"><span data-lang-inline="fr">Nous connaissons les foreuses, les abatteuses, les chaises dentaires. Nous structurons chaque dossier selon la réalité de votre actif.</span><span data-lang-inline="en">We know drills, harvesters, dental chairs. We structure every file according to the reality of your asset.</span></div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">📍</div>
+        <div class="why-title"><span data-lang-inline="fr">Service local</span><span data-lang-inline="en">Local service</span></div>
+        <div class="why-desc"><span data-lang-inline="fr">Basés à Rouyn-Noranda, nous connaissons l'Abitibi-Témiscamingue. Pas un centre d'appels de Toronto — un vrai partenaire local.</span><span data-lang-inline="en">Based in Rouyn-Noranda, we know Abitibi-Témiscamingue. Not a Toronto call centre — a real local partner.</span></div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🌐</div>
+        <div class="why-title"><span data-lang-inline="fr">Appuyé par Grenke Finance</span><span data-lang-inline="en">Backed by Grenke Finance</span></div>
+        <div class="why-desc"><span data-lang-inline="fr">Grenke est un leader mondial en location d'équipement. Vous bénéficiez d'une expertise internationale avec un service humain et local.</span><span data-lang-inline="en">Grenke is a global leader in equipment leasing. You get international expertise with human, local service.</span></div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💬</div>
+        <div class="why-title"><span data-lang-inline="fr">Bilingue, toujours</span><span data-lang-inline="en">Bilingual, always</span></div>
+        <div class="why-desc"><span data-lang-inline="fr">Tous nos services sont disponibles en français et en anglais. Vous choisissez dans quelle langue travailler.</span><span data-lang-inline="en">All our services are available in French and English. You choose which language to work in.</span></div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">💰</div>
+        <div class="why-title"><span data-lang-inline="fr">Aucuns frais cachés</span><span data-lang-inline="en">No hidden fees</span></div>
+        <div class="why-desc"><span data-lang-inline="fr">La consultation est gratuite. Notre rémunération vient du prêteur, pas de vous. Vous payez seulement vos paiements de location.</span><span data-lang-inline="en">Consultation is free. Our fee comes from the lender, not you. You only pay your lease payments.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FULL APPLY FORM -->
+<div class="apply-band" id="demande">
+  <div class="apply-inner container">
+    <div class="apply-left fade-up">
+      <div class="section-eyebrow"><span data-lang-inline="fr">Démarrer votre financement</span><span data-lang-inline="en">Start your financing</span></div>
+      <h2 class="section-title">
+        <span data-lang-inline="fr">Faire une demande de financement</span>
+        <span data-lang-inline="en">Apply for financing</span>
+      </h2>
+      <p class="section-sub">
+        <span data-lang-inline="fr">Complétez ce formulaire et notre équipe vous contactera sous 24 heures pour discuter de vos options.</span>
+        <span data-lang-inline="en">Complete this form and our team will contact you within 24 hours to discuss your options.</span>
+      </p>
+      <ul class="apply-requirements">
+        <li><div class="req-check">✓</div> <span data-lang-inline="fr">2 ans en affaires minimum (préféré)</span><span data-lang-inline="en">Minimum 2 years in business (preferred)</span></li>
+        <li><div class="req-check">✓</div> <span data-lang-inline="fr">Équipement à usage commercial uniquement</span><span data-lang-inline="en">Commercial-use equipment only</span></li>
+        <li><div class="req-check">✓</div> <span data-lang-inline="fr">Montant minimum : 15 000 $</span><span data-lang-inline="en">Minimum amount: $15,000</span></li>
+        <li><div class="req-check">✓</div> <span data-lang-inline="fr">Équipement neuf ou récent accepté</span><span data-lang-inline="en">New or recent used equipment accepted</span></li>
+        <li><div class="req-check">✓</div> <span data-lang-inline="fr">Consultation 100 % gratuite et sans engagement</span><span data-lang-inline="en">100% free consultation, no commitment</span></li>
+      </ul>
+    </div>
+    <div class="apply-form-card fade-up">
+      <div class="apply-form-header">
+        <h3><span data-lang-inline="fr">Demande complète</span><span data-lang-inline="en">Full application</span></h3>
+        <p><span data-lang-inline="fr">Réponse sous 24 h · Confidentiel</span><span data-lang-inline="en">24h response · Confidential</span></p>
+      </div>
+      <div class="apply-form-body">
+        <form id="apply-form" onsubmit="submitForm(event,'apply-form','apply-success')">
+          <div class="form-row">
+            <div class="form-field">
+              <label><span data-lang-inline="fr">Prénom</span><span data-lang-inline="en">First name</span></label>
+              <input type="text" required>
+            </div>
+            <div class="form-field">
+              <label><span data-lang-inline="fr">Nom</span><span data-lang-inline="en">Last name</span></label>
+              <input type="text" required>
+            </div>
+          </div>
+          <div class="form-field">
+            <label><span data-lang-inline="fr">Nom de l'entreprise</span><span data-lang-inline="en">Company name</span></label>
+            <input type="text" required>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label><span data-lang-inline="fr">Secteur d'activité</span><span data-lang-inline="en">Industry</span></label>
+              <select required>
+                <option value=""></option>
+                <option><span data-lang-inline="fr">Minier</span><span data-lang-inline="en">Mining</span></option>
+                <option>Construction</option>
+                <option><span data-lang-inline="fr">Foresterie</span><span data-lang-inline="en">Forestry</span></option>
+                <option><span data-lang-inline="fr">Clinique dentaire</span><span data-lang-inline="en">Dental clinic</span></option>
+                <option><span data-lang-inline="fr">Clinique médicale</span><span data-lang-inline="en">Medical clinic</span></option>
+                <option><span data-lang-inline="fr">Autre</span><span data-lang-inline="en">Other</span></option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label><span data-lang-inline="fr">Années en affaires</span><span data-lang-inline="en">Years in business</span></label>
+              <select required>
+                <option value=""></option>
+                <option><span data-lang-inline="fr">Moins de 1 an</span><span data-lang-inline="en">Less than 1 year</span></option>
+                <option>1–2 <span data-lang-inline="fr">ans</span><span data-lang-inline="en">years</span></option>
+                <option>2–5 <span data-lang-inline="fr">ans</span><span data-lang-inline="en">years</span></option>
+                <option>5+ <span data-lang-inline="fr">ans</span><span data-lang-inline="en">years</span></option>
+              </select>
+            </div>
+          </div>
+          <div class="form-field">
+            <label><span data-lang-inline="fr">Type d'équipement</span><span data-lang-inline="en">Equipment type</span></label>
+            <input type="text" placeholder="ex: Excavatrice Komatsu PC360 2020">
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label><span data-lang-inline="fr">Valeur estimée ($)</span><span data-lang-inline="en">Estimated value ($)</span></label>
+              <input type="text" placeholder="75 000 $" required>
+            </div>
+            <div class="form-field">
+              <label><span data-lang-inline="fr">Terme souhaité</span><span data-lang-inline="en">Desired term</span></label>
+              <select>
+                <option>36 <span data-lang-inline="fr">mois</span><span data-lang-inline="en">months</span></option>
+                <option>48 <span data-lang-inline="fr">mois</span><span data-lang-inline="en">months</span></option>
+                <option selected>60 <span data-lang-inline="fr">mois</span><span data-lang-inline="en">months</span></option>
+                <option>72 <span data-lang-inline="fr">mois</span><span data-lang-inline="en">months</span></option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-field">
+              <label><span data-lang-inline="fr">Téléphone</span><span data-lang-inline="en">Phone</span></label>
+              <input type="tel" required placeholder="(819) 555-0100">
+            </div>
+            <div class="form-field">
+              <label>Courriel / Email</label>
+              <input type="email" required placeholder="vous@entreprise.ca">
+            </div>
+          </div>
+          <div class="form-field">
+            <label><span data-lang-inline="fr">Message (optionnel)</span><span data-lang-inline="en">Message (optional)</span></label>
+            <textarea rows="2" style="resize:vertical" placeholder="..."></textarea>
+          </div>
+          <button type="submit" class="apply-submit">
+            <span data-lang-inline="fr">Envoyer ma demande →</span>
+            <span data-lang-inline="en">Submit my application →</span>
+          </button>
+          <p class="form-note" style="color:rgba(255,255,255,0.4);margin-top:8px">
+            <span data-lang-inline="fr">Vos informations sont confidentielles et ne sont jamais partagées sans votre accord.</span>
+            <span data-lang-inline="en">Your information is confidential and never shared without your consent.</span>
+          </p>
+        </form>
+        <div class="form-success" id="apply-success">
+          <span data-lang-inline="fr">✓ Demande reçue ! Patrick vous contactera sous 24 heures pour discuter de votre dossier.</span>
+          <span data-lang-inline="en">✓ Application received! Patrick will contact you within 24 hours to discuss your file.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT / CONTACT -->
+<section class="section" id="contact">
+  <div class="container">
+    <div class="about-wrap">
+      <div class="about-card fade-up">
+        <div style="font-family:var(--ff-display);font-size:22px;color:var(--white);font-weight:700;margin-bottom:6px">
+          GCI-<span style="color:var(--gold)">Finance</span>
+        </div>
+        <div style="font-size:13px;color:rgba(255,255,255,0.45);margin-bottom:24px">Groupe de Commerce Intercontinental Inc.</div>
+        <div class="about-contact-item">
+          <div class="about-icon">📍</div>
+          <div>
+            <div>1014 chemin des Conifères</div>
+            <div style="color:rgba(255,255,255,0.45);font-size:13px">Rouyn-Noranda, Québec J0Z 3J0</div>
+          </div>
+        </div>
+        <div class="about-contact-item">
+          <div class="about-icon">📞</div>
+          <a href="tel:+14384026616">(438) 402-6616</a>
+        </div>
+        <div class="about-contact-item">
+          <div class="about-icon">✉️</div>
+          <a href="mailto:info@gci-finance.ca">info@gci-finance.ca</a>
+        </div>
+        <div class="about-contact-item">
+          <div class="about-icon">🕒</div>
+          <div>
+            <span data-lang-inline="fr">Lundi au vendredi · 9 h à 17 h</span>
+            <span data-lang-inline="en">Monday to Friday · 9am to 5pm</span>
+          </div>
+        </div>
+        <div class="about-contact-item">
+          <div class="about-icon">🌐</div>
+          <a href="https://www.gci-finance.ca">www.gci-finance.ca</a>
+        </div>
+        <div style="margin-top:24px;padding:14px 16px;background:rgba(186,117,23,0.12);border:1px solid rgba(186,117,23,0.25);border-radius:8px;font-size:12px;color:rgba(255,255,255,0.6);line-height:1.6">
+          <span style="color:var(--gold2);font-weight:600">Grenke Finance</span>
+          <br><span data-lang-inline="fr">Partenaire officiel — leader mondial en financement d'équipement</span>
+          <span data-lang-inline="en">Official partner — global leader in equipment financing</span>
+        </div>
+      </div>
+      <div class="about-text fade-up">
+        <div class="partner-badge">
+          <span>🤝</span>
+          <span data-lang-inline="fr">Partenaire Grenke Finance</span>
+          <span data-lang-inline="en">Grenke Finance partner</span>
+        </div>
+        <h2>
+          <span data-lang-inline="fr">Votre partenaire local en financement d'équipement</span>
+          <span data-lang-inline="en">Your local equipment financing partner</span>
+        </h2>
+        <p>
+          <span data-lang-inline="fr">GCI-Finance est un cabinet de courtage québécois spécialisé en financement et en location d'équipement pour les PME des secteurs minier, construction, forestier, dentaire et médical en Abitibi-Témiscamingue.</span>
+          <span data-lang-inline="en">GCI-Finance is a Quebec-based brokerage specializing in equipment financing and leasing for SMEs in the mining, construction, forestry, dental and medical sectors in Abitibi-Témiscamingue.</span>
+        </p>
+        <p>
+          <span data-lang-inline="fr">Grâce à notre partenariat avec <strong>Grenke Finance</strong>, leader mondial de la location d'équipement, nous vous offrons une expertise internationale avec un service humain, local et bilingue. Notre mission : vous donner accès aux équipements dont vous avez besoin pour croître — sans compromettre votre trésorerie.</span>
+          <span data-lang-inline="en">Through our partnership with <strong>Grenke Finance</strong>, a global leader in equipment leasing, we offer you international expertise with human, local, bilingual service. Our mission: give you access to the equipment you need to grow — without compromising your cash flow.</span>
+        </p>
+        <p>
+          <span data-lang-inline="fr">Fondé et dirigé par <strong>Patrick B. Pierre</strong>, président, avec plus de 20 ans d'expérience en Afrique et au Canada dans les secteurs des affaires et de la finance.</span>
+          <span data-lang-inline="en">Founded and led by <strong>Patrick B. Pierre</strong>, President, with over 20 years of experience in Africa and Canada across business and finance sectors.</span>
+        </p>
+        <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap">
+          <button class="btn-primary" onclick="document.getElementById('demande').scrollIntoView({behavior:'smooth'})">
+            <span data-lang-inline="fr">Faire une demande →</span>
+            <span data-lang-inline="en">Apply now →</span>
+          </button>
+          <a href="mailto:info@gci-finance.ca" class="btn-secondary" style="display:inline-flex;align-items:center">
+            <span data-lang-inline="fr">Nous écrire</span>
+            <span data-lang-inline="en">Email us</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-logo">GCI-<span>Finance</span></div>
+        <p class="footer-desc">
+          <span data-lang-inline="fr">Courtier en financement d'équipement · Abitibi-Témiscamingue, Québec · Partenaire Grenke Finance · Service bilingue</span>
+          <span data-lang-inline="en">Equipment finance broker · Abitibi-Témiscamingue, Quebec · Grenke Finance partner · Bilingual service</span>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h4><span data-lang-inline="fr">Secteurs</span><span data-lang-inline="en">Sectors</span></h4>
+        <a href="#secteurs"><span data-lang-inline="fr">Minier</span><span data-lang-inline="en">Mining</span></a>
+        <a href="#secteurs">Construction</a>
+        <a href="#secteurs"><span data-lang-inline="fr">Foresterie</span><span data-lang-inline="en">Forestry</span></a>
+        <a href="#secteurs"><span data-lang-inline="fr">Dentaire</span><span data-lang-inline="en">Dental</span></a>
+        <a href="#secteurs"><span data-lang-inline="fr">Médical</span><span data-lang-inline="en">Medical</span></a>
+      </div>
+      <div class="footer-col">
+        <h4><span data-lang-inline="fr">Navigation</span><span data-lang-inline="en">Navigate</span></h4>
+        <a href="#services">Services</a>
+        <a href="#calculateur"><span data-lang-inline="fr">Calculateur</span><span data-lang-inline="en">Calculator</span></a>
+        <a href="#demande"><span data-lang-inline="fr">Faire une demande</span><span data-lang-inline="en">Apply now</span></a>
+        <a href="#contact"><span data-lang-inline="fr">Contact</span><span data-lang-inline="en">Contact</span></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 Groupe de Commerce Intercontinental Inc. · GCI-Finance · <span data-lang-inline="fr">Tous droits réservés</span><span data-lang-inline="en">All rights reserved</span></div>
+      <div class="footer-langs">
+        <a href="#" onclick="setLang('fr');return false">Français</a>
+        <a href="#" onclick="setLang('en');return false">English</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ── Language ── */
+var currentLang = 'fr';
+function setLang(lang) {
+  currentLang = lang;
+  document.body.classList.remove('fr','en');
+  document.body.classList.add(lang);
+  document.documentElement.lang = lang;
+  document.getElementById('lang-toggle').textContent = lang === 'fr' ? 'EN' : 'FR';
+  document.querySelector('meta[name="description"]').content = lang === 'fr'
+    ? 'GCI-Finance — Financement d\'équipement rapide pour les secteurs minier, construction, foresterie, dentaire et médical au Québec.'
+    : 'GCI-Finance — Fast equipment financing for mining, construction, forestry, dental and medical sectors in Quebec.';
+}
+function toggleLang() { setLang(currentLang === 'fr' ? 'en' : 'fr'); }
+
+/* ── Mobile menu ── */
+function toggleMenu() {
+  document.getElementById('mobile-menu').classList.toggle('open');
+}
+
+/* ── Calculator ── */
+function updateCalc() {
+  var val = parseFloat(document.getElementById('calc-val').value);
+  var months = parseInt(document.getElementById('calc-term').value);
+  var type = document.getElementById('calc-type').value;
+  var resultEl = document.getElementById('calc-result');
+  var noteEl = document.getElementById('calc-note');
+  if (!val || val < 1000) {
+    resultEl.textContent = '—';
+    noteEl.innerHTML = currentLang === 'fr' ? 'Entrez un montant ci-dessus' : 'Enter an amount above';
+    return;
+  }
+  var rate = type === 'fmv' ? 0.062/12 : 0.072/12;
+  var payment = Math.round(val * rate * Math.pow(1+rate,months) / (Math.pow(1+rate,months)-1));
+  resultEl.textContent = payment.toLocaleString('fr-CA',{style:'currency',currency:'CAD',maximumFractionDigits:0});
+  var total = payment * months;
+  noteEl.textContent = (currentLang === 'fr' ? 'Total sur ' + months + ' mois : ' : 'Total over ' + months + ' months: ')
+    + total.toLocaleString('fr-CA',{style:'currency',currency:'CAD',maximumFractionDigits:0});
+}
+
+/* ── Form submission ── */
+function submitForm(e, formId, successId) {
+  e.preventDefault();
+  var form = document.getElementById(formId);
+  var success = document.getElementById(successId);
+  form.style.display = 'none';
+  success.style.display = 'block';
+  showToast();
+  // To connect to a real backend, replace the above with a fetch() to your endpoint
+  // fetch('/api/contact', { method:'POST', body: new FormData(form) });
+}
+function showToast() {
+  var t = document.getElementById('toast');
+  t.textContent = currentLang === 'fr'
+    ? '✓ Demande envoyée — nous vous contacterons sous 24h'
+    : '✓ Request sent — we\'ll contact you within 24h';
+  t.classList.add('show');
+  setTimeout(function(){ t.classList.remove('show'); }, 4000);
+}
+
+/* ── Scroll animations ── */
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(entry) {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-up').forEach(function(el){ observer.observe(el); });
+
+/* ── Stagger sector cards ── */
+document.querySelectorAll('.sector-card').forEach(function(card, i) {
+  card.style.transitionDelay = (i * 60) + 'ms';
+  card.classList.add('fade-up');
+  observer.observe(card);
+});
+</script>
+</body>
+</html>
