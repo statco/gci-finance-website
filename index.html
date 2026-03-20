@@ -700,20 +700,20 @@ footer {
           <div class="form-row">
             <div class="form-field">
               <label><span data-lang-inline="fr">Prénom</span><span data-lang-inline="en">First name</span></label>
-              <input type="text" placeholder="Patrick" required>
+              <input type="text" name="prenom" placeholder="Patrick" required>
             </div>
             <div class="form-field">
               <label><span data-lang-inline="fr">Nom</span><span data-lang-inline="en">Last name</span></label>
-              <input type="text" placeholder="Pierre" required>
+              <input type="text" name="nom" placeholder="Pierre" required>
             </div>
           </div>
           <div class="form-field">
             <label><span data-lang-inline="fr">Entreprise</span><span data-lang-inline="en">Company</span></label>
-            <input type="text" placeholder="Excavation Tremblay Inc." required>
+            <input type="text" name="entreprise" placeholder="Excavation Tremblay Inc." required>
           </div>
           <div class="form-field">
             <label><span data-lang-inline="fr">Secteur</span><span data-lang-inline="en">Sector</span></label>
-            <select required>
+            <select name="secteur" required>
               <option value="" data-fr="Sélectionner..." data-en="Select...">Sélectionner...</option>
               <option data-fr="Minier" data-en="Mining">Minier</option>
               <option>Construction</option>
@@ -726,16 +726,16 @@ footer {
           <div class="form-row">
             <div class="form-field">
               <label><span data-lang-inline="fr">Valeur estimée</span><span data-lang-inline="en">Est. equipment value</span></label>
-              <input type="text" placeholder="ex: 75 000 $" required>
+              <input type="text" name="valeur_equipement" placeholder="ex: 75 000 $" required>
             </div>
             <div class="form-field">
               <label><span data-lang-inline="fr">Téléphone</span><span data-lang-inline="en">Phone</span></label>
-              <input type="tel" placeholder="(819) 555-0100" required>
+              <input type="tel" name="telephone" placeholder="(819) 555-0100" required>
             </div>
           </div>
           <div class="form-field">
             <label>Courriel / Email</label>
-            <input type="email" placeholder="patrick@entreprise.ca" required>
+            <input type="email" name="email" placeholder="patrick@entreprise.ca" required>
           </div>
           <button type="submit" class="form-submit">
             <span data-lang-inline="fr">Soumettre ma demande →</span>
@@ -1049,21 +1049,21 @@ footer {
           <div class="form-row">
             <div class="form-field">
               <label><span data-lang-inline="fr">Prénom</span><span data-lang-inline="en">First name</span></label>
-              <input type="text" required>
+              <input type="text" name="prenom" required>
             </div>
             <div class="form-field">
               <label><span data-lang-inline="fr">Nom</span><span data-lang-inline="en">Last name</span></label>
-              <input type="text" required>
+              <input type="text" name="nom" required>
             </div>
           </div>
           <div class="form-field">
             <label><span data-lang-inline="fr">Nom de l'entreprise</span><span data-lang-inline="en">Company name</span></label>
-            <input type="text" required>
+            <input type="text" name="entreprise" required>
           </div>
           <div class="form-row">
             <div class="form-field">
               <label><span data-lang-inline="fr">Secteur d'activité</span><span data-lang-inline="en">Industry</span></label>
-              <select required>
+              <select name="secteur" required>
                 <option value=""></option>
                 <option data-fr="Minier" data-en="Mining">Minier / Mining</option>
                 <option>Construction</option>
@@ -1075,7 +1075,7 @@ footer {
             </div>
             <div class="form-field">
               <label><span data-lang-inline="fr">Années en affaires</span><span data-lang-inline="en">Years in business</span></label>
-              <select required>
+              <select name="annees_en_affaires" required>
                 <option value=""></option>
                 <option data-fr="Moins de 1 an" data-en="Less than 1 year">Moins de 1 an / Less than 1 year</option>
                 <option data-fr="1–2 ans" data-en="1–2 years">1–2 ans / years</option>
@@ -1086,16 +1086,16 @@ footer {
           </div>
           <div class="form-field">
             <label><span data-lang-inline="fr">Type d'équipement</span><span data-lang-inline="en">Equipment type</span></label>
-            <input type="text" placeholder="ex: Excavatrice Komatsu PC360 2020">
+            <input type="text" name="type_equipement" placeholder="ex: Excavatrice Komatsu PC360 2020">
           </div>
           <div class="form-row">
             <div class="form-field">
               <label><span data-lang-inline="fr">Valeur estimée ($)</span><span data-lang-inline="en">Estimated value ($)</span></label>
-              <input type="text" placeholder="75 000 $" required>
+              <input type="text" name="valeur_equipement" placeholder="75 000 $" required>
             </div>
             <div class="form-field">
               <label><span data-lang-inline="fr">Terme souhaité</span><span data-lang-inline="en">Desired term</span></label>
-              <select>
+              <select name="terme">
                 <option data-fr="36 mois" data-en="36 months">36 mois / months</option>
                 <option data-fr="48 mois" data-en="48 months">48 mois / months</option>
                 <option selected data-fr="60 mois" data-en="60 months">60 mois / months</option>
@@ -1106,16 +1106,16 @@ footer {
           <div class="form-row">
             <div class="form-field">
               <label><span data-lang-inline="fr">Téléphone</span><span data-lang-inline="en">Phone</span></label>
-              <input type="tel" required placeholder="(819) 555-0100">
+              <input type="tel" name="telephone" required placeholder="(819) 555-0100">
             </div>
             <div class="form-field">
               <label>Courriel / Email</label>
-              <input type="email" required placeholder="vous@entreprise.ca">
+              <input type="email" name="email" required placeholder="vous@entreprise.ca">
             </div>
           </div>
           <div class="form-field">
             <label><span data-lang-inline="fr">Message (optionnel)</span><span data-lang-inline="en">Message (optional)</span></label>
-            <textarea rows="2" style="resize:vertical" placeholder="..."></textarea>
+            <textarea name="message" rows="2" style="resize:vertical" placeholder="..."></textarea>
           </div>
           <button type="submit" class="apply-submit">
             <span data-lang-inline="fr">Envoyer ma demande →</span>
