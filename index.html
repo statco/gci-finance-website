@@ -916,7 +916,7 @@ footer {
             <div>
               <div class="calc-result-label"><span data-lang-inline="fr">Paiement mensuel estimé</span><span data-lang-inline="en">Estimated monthly payment</span></div>
               <div class="calc-result-amount" id="calc-result">—</div>
-              <div class="calc-result-note" id="calc-note"><span data-lang-inline="fr">Entrez un montant ci-dessus</span><span data-lang-inline="en">Enter an amount above</span></div>
+              <div class="calc-result-note" id="calc-note">—</div>
             </div>
           </div>
           <button class="calc-btn-main" onclick="document.getElementById('demande').scrollIntoView({behavior:'smooth'})">
@@ -1275,22 +1275,27 @@ function toggleMenu() {
 
 /* ── Calculator ── */
 function updateCalc() {
-  var val = parseFloat(document.getElementById('calc-val').value);
-  var months = parseInt(document.getElementById('calc-term').value);
-  var type = document.getElementById('calc-type').value;
+  var valInput = document.getElementById('calc-val');
+  var termEl  = document.getElementById('calc-term');
+  var typeEl  = document.getElementById('calc-type');
   var resultEl = document.getElementById('calc-result');
-  var noteEl = document.getElementById('calc-note');
-  if (!val || val < 1000) {
+  var noteEl   = document.getElementById('calc-note');
+  if (!valInput || !termEl || !typeEl || !resultEl || !noteEl) return;
+  var val    = parseFloat(valInput.value);
+  var months = parseInt(termEl.value) || 60;
+  var type   = typeEl.value;
+  var fr     = (currentLang === 'fr');
+  if (!val || isNaN(val) || val < 1000) {
     resultEl.textContent = '—';
-    noteEl.innerHTML = currentLang === 'fr' ? 'Entrez un montant ci-dessus' : 'Enter an amount above';
+    noteEl.textContent   = fr ? 'Entrez un montant ci-dessus' : 'Enter an amount above';
     return;
   }
-  var rate = type === 'fmv' ? 0.062/12 : 0.072/12;
+  var rate    = (type === 'fmv' ? 0.062 : 0.072) / 12;
   var payment = Math.round(val * rate * Math.pow(1+rate,months) / (Math.pow(1+rate,months)-1));
-  resultEl.textContent = payment.toLocaleString('fr-CA',{style:'currency',currency:'CAD',maximumFractionDigits:0});
-  var total = payment * months;
-  noteEl.textContent = (currentLang === 'fr' ? 'Total sur ' + months + ' mois : ' : 'Total over ' + months + ' months: ')
-    + total.toLocaleString('fr-CA',{style:'currency',currency:'CAD',maximumFractionDigits:0});
+  var total   = payment * months;
+  var fmt = function(n){ return n.toLocaleString('fr-CA',{style:'currency',currency:'CAD',maximumFractionDigits:0}); };
+  resultEl.textContent = fmt(payment);
+  noteEl.textContent   = (fr ? 'Total sur '+months+' mois : ' : 'Total over '+months+' months: ') + fmt(total);
 }
 
 /* ── Form submission ── */
@@ -1349,6 +1354,9 @@ document.querySelectorAll('.sector-card').forEach(function(card, i) {
 document.querySelectorAll('option[data-fr]').forEach(function(opt){
   opt.textContent = opt.getAttribute('data-fr');
 });
+/* ── Init calculator note ── */
+var cn = document.getElementById('calc-note');
+if(cn) cn.textContent = 'Entrez un montant ci-dessus';
 </script>
 </body>
 </html>
