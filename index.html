@@ -714,13 +714,13 @@ footer {
           <div class="form-field">
             <label><span data-lang-inline="fr">Secteur</span><span data-lang-inline="en">Sector</span></label>
             <select required>
-              <option value=""><span data-lang-inline="fr">Sélectionner...</span><span data-lang-inline="en">Select...</span></option>
-              <option data-lang-inline="fr">Minier</option><option data-lang-inline="en" style="display:none">Mining</option>
+              <option value="" data-fr="Sélectionner..." data-en="Select...">Sélectionner...</option>
+              <option data-fr="Minier" data-en="Mining">Minier</option>
               <option>Construction</option>
-              <option data-lang-inline="fr">Foresterie</option><option data-lang-inline="en" style="display:none">Forestry</option>
-              <option data-lang-inline="fr">Clinique dentaire</option><option data-lang-inline="en" style="display:none">Dental clinic</option>
-              <option data-lang-inline="fr">Clinique médicale</option><option data-lang-inline="en" style="display:none">Medical clinic</option>
-              <option data-lang-inline="fr">Autre</option><option data-lang-inline="en" style="display:none">Other</option>
+              <option data-fr="Foresterie" data-en="Forestry">Foresterie</option>
+              <option data-fr="Clinique dentaire" data-en="Dental clinic">Clinique dentaire</option>
+              <option data-fr="Clinique médicale" data-en="Medical clinic">Clinique médicale</option>
+              <option data-fr="Autre" data-en="Other">Autre</option>
             </select>
           </div>
           <div class="form-row">
@@ -907,8 +907,8 @@ footer {
             <div class="calc-field">
               <label><span data-lang-inline="fr">Type de location</span><span data-lang-inline="en">Lease type</span></label>
               <select id="calc-type" onchange="updateCalc()">
-                <option value="buyout"><span data-lang-inline="fr">Rachat à 1 $</span><span data-lang-inline="en">$1 Buyout</span></option>
-                <option value="fmv">FMV</option>
+                <option value="buyout" data-fr="Rachat à 1 $" data-en="$1 Buyout">Rachat à 1 $</option>
+                <option value="fmv" data-fr="Location VM (FMV)" data-en="Fair Market Value (FMV)">Location VM (FMV)</option>
               </select>
             </div>
           </div>
