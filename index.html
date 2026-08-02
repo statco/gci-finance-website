@@ -429,6 +429,23 @@ nav {
 .why-title { font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 10px; }
 .why-desc { font-size: 14px; color: var(--gray); line-height: 1.7; }
 
+/* ─── FINANCING SOLUTIONS ADD-ON + DISCLAIMER ─── */
+.addon-card {
+  display: flex; align-items: flex-start; gap: 20px;
+  background: var(--gold-lt); border: 1.5px solid rgba(186,117,23,0.25);
+  border-radius: var(--radius-lg); padding: 26px 28px; margin-top: 24px;
+}
+.addon-icon { font-size: 26px; line-height: 1; }
+.addon-title { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+.addon-desc { font-size: 13px; color: var(--gray); line-height: 1.6; }
+.solutions-also {
+  font-size: 13px; color: var(--gray); line-height: 1.7; margin-top: 20px;
+}
+.solutions-disclaimer {
+  font-size: 11.5px; color: var(--mid); line-height: 1.7; margin-top: 14px;
+  padding-top: 14px; border-top: 1px solid var(--border);
+}
+
 /* ─── APPLY SECTION ─── */
 .apply-band {
   background: var(--navy); padding: 80px 5%;
@@ -621,6 +638,7 @@ footer {
     <ul class="nav-links">
       <li><a href="#services" data-lang-inline="fr">Services</a><a href="#services" data-lang-inline="en">Services</a></li>
       <li><a href="#secteurs" data-lang-inline="fr">Secteurs</a><a href="#secteurs" data-lang-inline="en">Sectors</a></li>
+      <li><a href="#solutions" data-lang-inline="fr">Solutions</a><a href="#solutions" data-lang-inline="en">Solutions</a></li>
       <li><a href="#calculateur" data-lang-inline="fr">Calculateur</a><a href="#calculateur" data-lang-inline="en">Calculator</a></li>
       <li><a href="#a-propos" data-lang-inline="fr">À propos</a><a href="#a-propos" data-lang-inline="en">About</a></li>
       <li><a href="#contact" data-lang-inline="fr">Contact</a><a href="#contact" data-lang-inline="en">Contact</a></li>
@@ -639,6 +657,7 @@ footer {
   <div class="mobile-menu" id="mobile-menu">
     <a href="#services" onclick="toggleMenu()"><span data-lang-inline="fr">Services</span><span data-lang-inline="en">Services</span></a>
     <a href="#secteurs" onclick="toggleMenu()"><span data-lang-inline="fr">Secteurs</span><span data-lang-inline="en">Sectors</span></a>
+    <a href="#solutions" onclick="toggleMenu()"><span data-lang-inline="fr">Solutions</span><span data-lang-inline="en">Solutions</span></a>
     <a href="#calculateur" onclick="toggleMenu()"><span data-lang-inline="fr">Calculateur</span><span data-lang-inline="en">Calculator</span></a>
     <a href="#demande" onclick="toggleMenu()"><span data-lang-inline="fr">Faire une demande</span><span data-lang-inline="en">Apply Now</span></a>
     <a href="#a-propos" onclick="toggleMenu()"><span data-lang-inline="fr">À propos</span><span data-lang-inline="en">About</span></a>
@@ -760,6 +779,91 @@ footer {
         <div class="sector-equip"><span data-lang-inline="fr">Imagerie · Diagnostic · Tables · Systèmes DMÉ</span><span data-lang-inline="en">Imaging · Diagnostic · Patient tables · EMR</span></div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- FINANCING SOLUTIONS -->
+<section class="section" id="solutions">
+  <div class="container">
+    <div class="section-head fade-up">
+      <div class="section-eyebrow"><span data-lang-inline="fr">Solutions de financement</span><span data-lang-inline="en">Financing solutions</span></div>
+      <div class="section-title">
+        <span data-lang-inline="fr">Des structures pensées pour votre réalité d'exploitation</span>
+        <span data-lang-inline="en">Structures built for how you actually operate</span>
+      </div>
+      <p class="section-sub">
+        <span data-lang-inline="fr">Chaque dossier est différent — voici les principales façons dont nous structurons le financement selon votre trésorerie et votre secteur. Les modalités finales sont toujours sujettes à l'approbation du prêteur.</span>
+        <span data-lang-inline="en">Every file is different — here are the main ways we structure financing around your cash flow and your sector. Final terms are always subject to lender approval.</span>
+      </p>
+    </div>
+    <div class="why-grid fade-up">
+      <div class="why-card">
+        <div class="why-icon">🔒</div>
+        <div class="why-title">GCI FixedTrack Lease</div>
+        <div class="why-desc">
+          <span data-lang-inline="fr">Paiements fixes et prévisibles pour toute la durée du terme — remboursable par anticipation en tout temps. <strong>Idéal pour :</strong> budgets d'équipement annuels fixes, contrats à prix fixe de longue durée.</span>
+          <span data-lang-inline="en">Fixed, predictable payments for the full term — prepayable to maturity at any time. <strong>Best fit:</strong> locked annual equipment budgets, long fixed-price contracts.</span>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🔄</div>
+        <div class="why-title">GCI Walk-Away Advantage</div>
+        <div class="why-desc">
+          <span data-lang-inline="fr">Paiements mensuels réduits, heures d'utilisation illimitées, aucune mise de fonds. Retournez, mettez à niveau ou rachetez à la fin du terme. <strong>Idéal pour :</strong> rester à jour sans risque de propriété ni gros débours.</span>
+          <span data-lang-inline="en">Lower monthly payments, unlimited usage hours, no down payment. Return, upgrade, or buy out at term end. <strong>Best fit:</strong> staying current on equipment without ownership risk or a big cash outlay.</span>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">⚖️</div>
+        <div class="why-title">GCI BalancePoint Lease</div>
+        <div class="why-desc">
+          <span data-lang-inline="fr">Paiements mensuels réduits avec un solde forfaitaire unique à l'échéance — refinançable au besoin. <strong>Idéal pour :</strong> gérer la trésorerie aujourd'hui tout en gardant une voie vers la propriété.</span>
+          <span data-lang-inline="en">Smaller monthly payments with one lump-sum balance at maturity — refinanceable if needed. <strong>Best fit:</strong> managing cash flow today while keeping a path to ownership later.</span>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🌗</div>
+        <div class="why-title">GCI Seasonal Match</div>
+        <div class="why-desc">
+          <span data-lang-inline="fr">Calendrier de paiements calqué sur votre cycle de revenus — paiements réduits ou suspendus en basse saison. <strong>Idéal pour :</strong> foresterie, déneigement/aménagement, exploitation minière et construction saisonnières.</span>
+          <span data-lang-inline="en">Payment schedule built around your revenue cycle — reduced or paused payments in the slow season. <strong>Best fit:</strong> forestry, snow removal/landscaping, seasonal mining and construction operations.</span>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🔧</div>
+        <div class="why-title">GCI Rebuild Bridge</div>
+        <div class="why-desc">
+          <span data-lang-inline="fr">Finance une réfection ou réparation majeure sur un équipement existant, en étalant le coût sur plusieurs mois plutôt qu'en une seule facture. <strong>Idéal pour :</strong> prolonger la vie d'un équipement lourd vieillissant plutôt que de le remplacer.</span>
+          <span data-lang-inline="en">Finances a major rebuild or repair on existing equipment, spreading the cost over months instead of one invoice. <strong>Best fit:</strong> extending the life of aging heavy equipment instead of replacing it.</span>
+        </div>
+      </div>
+      <div class="why-card">
+        <div class="why-icon">🏆</div>
+        <div class="why-title">GCI Ownership Path</div>
+        <div class="why-desc">
+          <span data-lang-inline="fr">Prêt d'équipement standard — vous êtes propriétaire dès le premier jour, usage illimité, admissibilité potentielle aux programmes d'incitatifs gouvernementaux. <strong>Idéal pour :</strong> acheteurs qui veulent bâtir de l'équité immédiatement.</span>
+          <span data-lang-inline="en">Standard equipment loan — you own the equipment from day one, unlimited use, potential eligibility for government incentive programs. <strong>Best fit:</strong> buyers who want to build equity immediately.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="addon-card fade-up">
+      <div class="addon-icon">🛡️</div>
+      <div class="addon-body">
+        <div class="addon-title"><span data-lang-inline="fr">GCI Total Protect (option)</span><span data-lang-inline="en">GCI Total Protect (add-on)</span></div>
+        <div class="addon-desc"><span data-lang-inline="fr">Offert avec n'importe quelle structure ci-dessus : garantie mécanique prolongée + assurance vie/invalidité, intégrées à votre paiement.</span><span data-lang-inline="en">Available with any structure above: extended mechanical warranty + life/disability insurance, folded into your payment.</span></div>
+      </div>
+    </div>
+
+    <p class="solutions-also">
+      <span data-lang-inline="fr"><strong>Aussi disponible :</strong> financement pour équipement usagé, achats de gré à gré, et équipement transfrontalier/importé (ex. fournisseurs américains ou outre-mer) une fois débarqué et dédouané au Canada.</span>
+      <span data-lang-inline="en"><strong>Also available:</strong> financing for used equipment, private-sale purchases, and cross-border/import equipment (e.g., US or overseas suppliers) once landed and cleared through Canadian customs.</span>
+    </p>
+
+    <p class="solutions-disclaimer">
+      <span data-lang-inline="fr">GCI Finance est un courtage indépendant en financement d'équipement, multi-prêteurs — nous ne sommes pas un prêteur et ne sommes liés à aucun prêteur unique. Chaque dossier est jumelé à la structure et à l'institution financière qui convient le mieux, sous réserve de l'approbation du prêteur. Les noms de structures ci-dessus sont une image de marque propre à GCI Finance et non les noms de produits d'un prêteur en particulier.</span>
+      <span data-lang-inline="en">GCI Finance is an independent, multi-lender equipment finance brokerage — we are not a lender and are not tied to any single lender. Every file is matched to the structure and financial institution that fits best, subject to lender approval. The structure names above are GCI Finance's own branding, not the product names of any single lender.</span>
+    </p>
   </div>
 </section>
 
